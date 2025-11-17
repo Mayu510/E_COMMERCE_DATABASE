@@ -20,14 +20,20 @@ All tables include well-planned sample entries that simulate an actual e-commerc
 
 # ✔️ Proper Relationships & Constraints
     • Foreign keys applied
+    
     • Enum used for order status
+    
     • Data types chosen thoughtfully
+    
     • Normalized schema (Order → Order Items)
 
 # ✔️ Clean & Professional File Structure
     Includes separate files for:
+    
     • Database schema
+    
     • Insert statements
+    
     • Queries performed for analysis
 
 # 📁 Project Structure
@@ -45,27 +51,27 @@ All tables include well-planned sample entries that simulate an actual e-commerc
     • City
     • Registration date
 
-#🔹 CATEGORY
+# 🔹 CATEGORY
     Contains product categories like:
     • Electronics
     • Grocery
     • Home Appliances
     • Clothes
 
-#🔹 PRODUCT
+# 🔹 PRODUCT
     Stores product details:
     • Name
     • Category (linked via FK)
     • Price
     • Stock
 
-#🔹 ORDERS
+# 🔹 ORDERS
     Stores customer order details:
     • Order date
     • Customer ID
     • Status (Completed / Incomplete)
 
-#🔹 ORDER_ITEMS (Normalized)
+# 🔹 ORDER_ITEMS (Normalized)
     Stores items inside each order:
     • Product
     • Quantity
@@ -113,5 +119,6 @@ This is highly valuable for Data Analyst, Database Developer, and Software Engin
 
 Mahesh Kshirsagar
 📧 maheshkshirsagar510@gmail.com
+
 
 
