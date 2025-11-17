@@ -5,15 +5,15 @@ It focuses on clean database design, proper relationships, realistic sample data
 # 🚀 Features
 ✔️ Complete MySQL Database
 A structured and optimized database including:<br>
-    • CUSTOMERS <br>
+    • CUSTOMERS
     
-    • CATEGORY <br>
+    • CATEGORY 
     
-    • PRODUCT <br>
+    • PRODUCT 
     
-    • ORDERS <br>
+    • ORDERS 
     
-    • ORDER_ITEMS <br> 
+    • ORDER_ITEMS
 
 # ✔️ Realistic Sample Data
 All tables include well-planned sample entries that simulate an actual e-commerce environment.
@@ -119,6 +119,7 @@ This is highly valuable for Data Analyst, Database Developer, and Software Engin
 
 Mahesh Kshirsagar
 📧 maheshkshirsagar510@gmail.com
+
 
 
 
