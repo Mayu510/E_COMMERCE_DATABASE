@@ -37,10 +37,10 @@ All tables include well-planned sample entries that simulate an actual e-commerc
     • Queries performed for analysis
 
 # 📁 Project Structure
-/Ecommerce-Database-Project
+/Ecommerce-Database-Project <br>
 │
-├── ecommerce_schema.sql      # Database creation + sample data inserts
-├── ecommerce_queries.sql     # All SQL queries performed (not in README)
+├── ecommerce_schema.sql      # Database creation + sample data inserts <br>
+├── ecommerce_queries.sql     # All SQL queries performed (not in README) <br>
 └── README.md                 # Documentation
 
 # 🧱 Database Schema Overview
@@ -124,10 +124,10 @@ This normalization allows:
     2.	Open MySQL Workbench / Command Line
 
     3.	Run the schema file:
-    SOURCE ecommerce_schema.sql;
+        SOURCE ecommerce_schema.sql;
 
     4.	To run all queries (optional):
-    SOURCE ecommerce_queries.sql;
+        SOURCE ecommerce_queries.sql;
 
 # 📚 Learning Outcomes
 By exploring this project, you demonstrate understanding of:
@@ -144,6 +144,7 @@ This is highly valuable for Data Analyst, Database Developer, and Software Engin
 
 Mahesh Kshirsagar
 📧 maheshkshirsagar510@gmail.com
+
 
 
 
