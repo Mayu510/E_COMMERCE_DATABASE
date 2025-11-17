@@ -45,7 +45,6 @@ Ecommerce-Database-Project
 └── README.md                 <!-- Documentation -->
 </pre>
 
-
 # 🧱 Database Schema Overview
 # 🔹 CUSTOMERS
     Stores customer information such as:
@@ -147,6 +146,7 @@ This is highly valuable for Data Analyst, Database Developer, and Software Engin
 
 Mahesh Kshirsagar
 📧 maheshkshirsagar510@gmail.com
+
 
 
 
