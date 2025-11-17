@@ -37,11 +37,11 @@ All tables include well-planned sample entries that simulate an actual e-commerc
     • Queries performed for analysis
 
 # 📁 Project Structure
-Ecommerce-Database-Project <br>
-│ <br>
-├── ecommerce_schema.sql      # Database creation + sample data inserts <br>
-├── ecommerce_queries.sql     # All SQL queries performed (not in README) <br>
-└── README.md                 # Documentation <br>
+Ecommerce-Database-Project
+│
+├── ecommerce_schema.sql      # Database creation + sample data inserts
+├── ecommerce_queries.sql     # All SQL queries performed
+└── README.md                 # Documentation
 
 # 🧱 Database Schema Overview
 # 🔹 CUSTOMERS
@@ -144,6 +144,7 @@ This is highly valuable for Data Analyst, Database Developer, and Software Engin
 
 Mahesh Kshirsagar
 📧 maheshkshirsagar510@gmail.com
+
 
 
 
