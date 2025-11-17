@@ -1,0 +1,146 @@
+USE ECOMMERCE;
+
+-- Show all products with their names, prices, and available stock.
+SELECT PRODUCT_NAME,
+       PRODUCT_PRICE,
+       STOCK_QUANTITY AS STOCK_AVAILABLE
+FROM PRODUCT;
+
+
+-- Display the total number of products available in the product table.
+SELECT COUNT(*) AS TOTAL_PRODUCTS
+FROM PRODUCT;
+
+
+-- List all customers and their city names in alphabetical order.
+SELECT DISTINCT CUSTOMER_NAME, CUSTOMER_CITY
+FROM CUSTOMERS
+ORDER BY CUSTOMER_NAME, CUSTOMER_CITY ASC;
+
+
+-- Find all customers who registered before the year 2022.
+
+SELECT CUSTOMER_NAME, REGISTERED_DATE
+FROM CUSTOMERS
+WHERE REGISTERED_DATE < '2022-01-01'
+ORDER BY REGISTERED_DATE ASC;
+
+
+-- Show all products from the category “ELECTRONICS”.
+SELECT c.CATEGORY_ID, c.CATEGORY_NAME, p.PRODUCT_ID, p.PRODUCT_NAME
+FROM CATEGORY AS c
+LEFT JOIN PRODUCT AS p
+  ON c.CATEGORY_ID = p.PRODUCT_CATEGORY
+WHERE c.CATEGORY_NAME = 'ELECTRONICS';
+
+
+-- Display the total number of categories.
+SELECT COUNT(category_name) AS TOTAL_CATEGORIES
+FROM CATEGORY;
+
+
+-- Show the names and prices of all products that cost more than ₹5000.
+SELECT PRODUCT_NAME, PRODUCT_PRICE
+FROM PRODUCT
+WHERE PRODUCT_PRICE > 5000;
+
+
+-- Find the product with the lowest stock quantity.
+
+SELECT PRODUCT_NAME, STOCK_QUANTITY
+FROM PRODUCT
+ORDER BY STOCK_QUANTITY ASC
+LIMIT 1;
+
+
+-- Show all orders that are “INCOMPLETE”.
+SELECT *
+FROM ORDERS
+WHERE ORDER_STATUS = 'INCOMPLETE';
+
+
+-- Display all distinct cities where customers live.
+SELECT DISTINCT CUSTOMER_CITY
+FROM CUSTOMERS
+ORDER BY CUSTOMER_CITY;  -- small improvement for readability
+
+
+-- Display each product’s total stock value (price × quantity).
+SELECT PRODUCT_ID,
+       PRODUCT_NAME,
+       PRODUCT_PRICE,
+       STOCK_QUANTITY,
+       (PRODUCT_PRICE * STOCK_QUANTITY) AS TOTAL_VALUE
+FROM PRODUCT;
+
+
+-- Show the top 5 most expensive products.
+SELECT PRODUCT_ID,
+       PRODUCT_NAME,
+       PRODUCT_PRICE
+FROM PRODUCT
+ORDER BY PRODUCT_PRICE DESC
+LIMIT 5;
+
+
+-- List all orders made by customer “MAHESH KSHIRSAGAR”.
+SELECT *
+FROM ORDERS AS o
+LEFT JOIN CUSTOMERS AS c
+  ON o.CUSTOMER_ID = c.CUSTOMER_ID
+WHERE c.CUSTOMER_NAME = 'MAHESH KSHIRSAGAR';
+
+
+-- Find how many orders each customer has placed.
+SELECT c.CUSTOMER_ID, c.CUSTOMER_NAME, COUNT(o.ORDER_ID) AS ORDER_PER_CUSTOMER
+FROM CUSTOMERS AS c
+LEFT JOIN ORDERS AS o
+  ON c.CUSTOMER_ID = o.CUSTOMER_ID
+GROUP BY c.CUSTOMER_ID, c.CUSTOMER_NAME;
+
+
+-- Count how many products belong to each category.
+SELECT c.CATEGORY_ID, c.CATEGORY_NAME, COUNT(p.PRODUCT_ID) AS TOTAL_PRODUCTS
+FROM CATEGORY AS c
+LEFT JOIN PRODUCT AS p
+  ON c.CATEGORY_ID = p.PRODUCT_CATEGORY
+GROUP BY c.CATEGORY_ID, c.CATEGORY_NAME
+ORDER BY TOTAL_PRODUCTS ASC;
+
+
+-- Show all products sorted by their total stock value (high to low).
+SELECT PRODUCT_ID,
+       PRODUCT_NAME,
+       PRODUCT_PRICE,
+       STOCK_QUANTITY,
+       (PRODUCT_PRICE * STOCK_QUANTITY) AS TOTAL_STOCK_VALUE
+FROM PRODUCT
+ORDER BY TOTAL_STOCK_VALUE DESC;
+
+
+-- Find the total number of orders completed in 2025.
+SELECT COUNT(ORDER_STATUS) AS COMPLETED_ORDERS_2025
+FROM ORDERS
+WHERE ORDER_STATUS = 'COMPLETED'
+  AND YEAR(ORDER_DATE) = 2025;
+  
+  
+-- Display all orders placed between January and March 2025.
+SELECT ORDER_ID, ORDER_DATE
+FROM ORDERS
+WHERE ORDER_DATE BETWEEN '2025-01-01' AND '2025-03-31'
+ORDER BY ORDER_ID, ORDER_DATE;
+
+
+-- Find the total stock quantity across all categories combined.
+SELECT SUM(STOCK_QUANTITY) AS TOTAL_STOCK_QUANTITY
+FROM PRODUCT;
+
+
+-- Show which category has the most products.
+SELECT c.CATEGORY_ID, c.CATEGORY_NAME, COUNT(p.PRODUCT_CATEGORY) AS PRODUCT_COUNT
+FROM CATEGORY AS c
+LEFT JOIN PRODUCT AS p
+  ON c.CATEGORY_ID = p.PRODUCT_CATEGORY
+GROUP BY c.CATEGORY_ID, c.CATEGORY_NAME
+ORDER BY PRODUCT_COUNT DESC;
