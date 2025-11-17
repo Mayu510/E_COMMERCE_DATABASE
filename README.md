@@ -6,9 +6,13 @@ It focuses on clean database design, proper relationships, realistic sample data
 ✔️ Complete MySQL Database
 A structured and optimized database including:<br>
     • CUSTOMERS <br>
+    
     • CATEGORY <br>
+    
     • PRODUCT <br>
+    
     • ORDERS <br>
+    
     • ORDER_ITEMS <br> 
 
 # ✔️ Realistic Sample Data
@@ -109,4 +113,5 @@ This is highly valuable for Data Analyst, Database Developer, and Software Engin
 
 Mahesh Kshirsagar
 📧 maheshkshirsagar510@gmail.com
+
 
