@@ -46,47 +46,72 @@ All tables include well-planned sample entries that simulate an actual e-commerc
 # 🧱 Database Schema Overview
 # 🔹 CUSTOMERS
     Stores customer information such as:
+    
     • ID
+    
     • Name
+    
     • City
+    
     • Registration date
 
 # 🔹 CATEGORY
     Contains product categories like:
+    
     • Electronics
+    
     • Grocery
+    
     • Home Appliances
+    
     • Clothes
 
 # 🔹 PRODUCT
     Stores product details:
+    
     • Name
+    
     • Category (linked via FK)
+    
     • Price
+    
     • Stock
 
 # 🔹 ORDERS
     Stores customer order details:
+    
     • Order date
+    
     • Customer ID
+    
     • Status (Completed / Incomplete)
 
 # 🔹 ORDER_ITEMS (Normalized)
     Stores items inside each order:
+    
     • Product
+    
     • Quantity
+    
     • Unit price
 
 This normalization allows:
+    
     • Multiple products per order
+    
     • Quantity & price tracking
+    
     • Proper invoice calculation
 
 # 💡 Key Highlights of This Project
+
 🔹 Proper use of Primary Keys & Foreign Keys
 🔹 Clean normalization to 3NF
+
 🔹 Realistic sample data representing real e-commerce scenarios
+
 🔹 Easy to run and understand
+
 🔹 Ideal for:
     • Academic submissions
     • MySQL portfolio projects
@@ -119,6 +144,7 @@ This is highly valuable for Data Analyst, Database Developer, and Software Engin
 
 Mahesh Kshirsagar
 📧 maheshkshirsagar510@gmail.com
+
 
 
 
