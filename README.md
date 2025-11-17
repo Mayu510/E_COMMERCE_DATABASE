@@ -40,9 +40,9 @@ All tables include well-planned sample entries that simulate an actual e-commerc
 <pre>
 Ecommerce-Database-Project
 │
-├── ecommerce_schema.sql      &lt; # Database creation + sample data inserts --&gt;
-├── ecommerce_queries.sql     &lt;!# All SQL queries performed --&gt;
-└── README.md                 &lt;!# Documentation --&gt;
+├── ecommerce_schema.sql      # Database creation + sample data inserts 
+├── ecommerce_queries.sql     # All SQL queries performed
+└── README.md                 # Documentation
 </pre>
 
 # 🧱 Database Schema Overview
@@ -146,6 +146,7 @@ This is highly valuable for Data Analyst, Database Developer, and Software Engin
 
 Mahesh Kshirsagar
 📧 maheshkshirsagar510@gmail.com
+
 
 
 
